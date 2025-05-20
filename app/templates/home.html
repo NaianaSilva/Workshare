@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>WorkShare - Encontre seu Espaço de Trabalho</title>
+  <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo"> 
+      <img src="..\static\assets\logo.svg">
+    </div>
+      <nav>
+        <ul>
+          <li><a href="#">Explorar Espaços</a></li>
+          <li><a href="#">Anunciar Espaços</li>
+          <li><a href="#">Sobre Nós</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="#" class="btn login"><i class="bi-person"></i> Entrar</a>
+        <a href="#" class="btn signup">Meu Painel</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+  <img src="../static/imagens/Image.png" alt="Banner" class="banner-img">
+  <div class="banner-text">
+    <h1>Encontre o espaço ideal para o seu trabalho</h1>
+    <p>Escritórios, salas de reunião e espaços de coworking por hora ou diária</p>
+    
+    <div class="search-bar">
+    <form class="search-form">
+        
+        <div class="input-group">
+        <div class="icon-circle">
+            <i class="bi-geo-alt"></i>
+        </div>
+        <input type="text" placeholder="Onde você quer trabalhar?" name="local">
+        </div>
+
+        <div class="input-group">
+        <div class="icon-circle">
+            <i class="bi bi-calendar"></i>
+        </div>
+        <input type="text" placeholder="Selecionar data" name="data">
+        </div>
+
+        <div class="input-group">
+        <div class="icon-circle">
+            <i class="bi-person"></i>
+        </div>
+        <input type="number" name="pessoas" placeholder="Usuários">
+        </div>
+
+        <button type="submit">Buscar</button>
+    </form>
+    </div>
+</section>
+
+<section class="featured-spaces"> 
+<div class="container">
+  <h3>Espaços em Destaque</h3>
+  
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="todos">Todos</button>
+    <button class="filter-btn" data-filter="escritorio">Escritórios</button>
+    <button class="filter-btn" data-filter="reuniao">Salas de Reunião</button>
+    <button class="filter-btn" data-filter="estudio">Estúdios</button>
+  </div>
+
+
+
+    <div class="spaces-grid">
+      <div class="space-card" data-local="São Paulo" data-pessoas="10">
+        <img src="../static/imagens/image1.png" alt="Espaço 1">
+        <div class="space-info">
+          <h4>Escritório Moderno no Centro</h4>
+          <p><i class="bi bi-geo-alt"></i> Centro, São Paulo, SP</p>
+          <p><i class="bi bi-person"></i> Até 4 pessoas</p>
+          <hr>
+
+          <div class="space-footer">
+            <p class="price">R$ 1500/hora</p> 
+            <a href="#" class="btn reserve-btn">Ver Detalhes</a>
+         </div>
+
+        </div>
+      </div>
+
+      <div class="space-card" data-local="Belo Horizonte" data-pessoas="5">
+        <img src="../static/imagens/image2.png" alt="Espaço 2">
+        <div class="space-info">
+          <h4>Sala de Reunião </h4>
+          <p><i class="fbi bi-geo-alt"></i> Itaim Bibi, São Paulo</p>
+          <p><i class="bi bi-person"></i> Até 8 pessoas</p>
+          <hr>
+           <div class="space-footer">
+          <p class="price">R$ 200/hora</p>
+          <a href="#" class="btn reserve-btn">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-card" data-local="Rio de Janeiro" data-pessoas="8">
+        <img src="../static/imagens/image3.png" alt="Espaço 3">
+        <div class="space-info">
+          <h4>Coworking Criativo</h4>
+          <p><i class="fbi bi-geo-alt"></i> Itaim Bibi, São Paulo</p>
+          <p><i class="bi bi-person"></i> Até 5 pessoas</p>
+          <hr>
+           <div class="space-footer">
+          <p class="price">R$ 900/hora</p>
+          <a href="#" class="btn reserve-btn">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-card" data-local="Rio de Janeiro" data-pessoas="8">
+        <img src="../static/imagens/image4.png" alt="Espaço 4">
+        <div class="space-info">
+          <h4>Estúdio para Criação de Conteúdo</h4>
+          <p><i class="fbi bi-geo-alt"></i> Pinheiros, São Paulo</p>
+          <p><i class="bi bi-person"></i> Até 2 pessoas</p>
+          <hr>
+           <div class="space-footer">
+            <p class="price">R$ 180/hora</p>
+            <a href="#" class="btn reserve-btn">Ver Detalhes</a>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="space-card" data-local="Rio de Janeiro" data-pessoas="8">
+        <img src="../static/imagens/image5.png" alt="Espaço 5">
+        <div class="space-info">
+          <h4>Sala para Workshops e Treinamentos</h4>
+          <p><i class="fbi bi-geo-alt"></i> Brooklin, São Paulo</p>
+          <p><i class="bi bi-person"></i> Até 15 pessoas</p>
+          <hr>
+           <div class="space-footer">
+            <p class="price">R$ 300/hora</p>
+            <a href="#" class="btn reserve-btn">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-card" data-local="Rio de Janeiro" data-pessoas="8">
+        <img src="../static/imagens/image6.png" alt="Espaço 6">
+        <div class="space-info">
+          <h4>Ambiente Calmo para Concentração</h4>
+          <p><i class="fbi bi-geo-alt"></i> Moema, São Pauloo</p>
+          <p><i class="bi bi-person"></i> Até 2 pessoas</p>
+          <hr>
+          <div class="space-footer">
+            <p class="price">R$ 120/hora</p>
+            <a href="#" class="btn reserve-btn">Ver Detalhes</a>
+          </div>
+      </div>
+
+    </div>
+    <div class="ver-mais-espacos">
+      <a href="#" class="btn-ver-mais">Ver mais espaços</a>
+     </div>
+  </div>
+</section>
+
+ <section class="how-it-works">
+  <div class="container">
+    <h3>Como Funciona</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <h4>Busque</h4>
+        <p>Encontre o espaço perfeito usando nossa ferramenta de busca avançada com filtros de localização, capacidade e amenidades.</p>
+      </div>
+      <div class="step">
+        <div class="icon">
+          <i class="far fa-calendar-alt"></i>
+        </div>
+        <h4>Reserve</h4>
+        <p>Escolha o dia e horário que precisa e faça sua reserva em poucos cliques, com confirmação instantânea.</p>
+      </div>
+      <div class="step">
+        <div class="icon">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <h4>Trabalhe</h4>
+        <p>Chegue ao local, apresente sua reserva e aproveite um ambiente produtivo e confortável para suas atividades.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="cta">
+    <div class="container">
+      <h3>Tem um espaço disponível?</h3>
+      <p>Anuncie seu escritório, sala de reunião ou espaço de trabalho e comece a gerar 
+      <p>extra com o WorkShare.</p>
+      <a href="#" class="btn">Seja um anfitrião</a>
+    </div>
+  </section>
+
+  
+  <footer>
+  <hr>
+  <div class="container">
+    <div class="footer-columns">
+      <div>
+        <h3>WorkShare</h3>
+        <p>Encontre o espaço de trabalho ideal para</p>
+        <p>suas necessidades, seja por algumas horas ou dias.</p>
+      </div>
+
+      <div>
+        <h4>Quem somos</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Empresa</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Anfitrião</h4>
+        <ul>
+          <li><a href="#">Anuncie seu espaço</a></li>
+          <li><a href="#">Seguro para anfitrião</a></li>
+          <li><a href="#">Recursos</a></li>
+          <li><a href="#">Fórum da comunidade</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Centro de ajuda</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Termos de serviços</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <hr>
+      <div class="footer-bottom-content">
+        <p>&copy; 2025 WorkShare. Todos os direitos reservados.</p>
+        <nav class="social-links">
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="../static/js/home.js"></script>
+</body>
+</html>
