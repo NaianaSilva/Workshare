@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>WorkShare - Detalhes</title>
+  <link rel="stylesheet" href="../static/css/apresentacao.css" />
+</head>
+<body>
+
+    
+<header>
+    <div class="container header-content">
+      <div class="logo"> 
+      <img src="../static/assets/logo.svg" alt="Logo WorkShare">
+    </div>
+      <nav>
+        <ul>
+          <li><a href="#">Explorar Espaços</a></li>
+          <li><a href="#">Anunciar Espaços</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="#" class="btn login"><i class="bi-person"></i> Entrar</a>
+        <a href="#" class="btn signup">Meu Painel</a>
+      </div>
+    </div>
+
+</header>
+
+
+  <main>
+        <section class="detalhes">
+        <h1>Escritório Moderno no Centro</h1>
+        <div class="avaliacoes">
+            <span class="estrela">⭐</span> 4.8 (32 avaliações) · Av. Paulista, 1000, Centro, São Paulo
+        </div>
+        <div class="galeria">
+            <img src="../static/imagens/image1.png" alt="Foto principal" class="foto-principal" />
+            <div class="fotos-secundarias">
+            <img src="../static/imagens/image2-2.png" alt="Espaço 1" />
+            <img src="../static/imagens/image7.png" alt="Espaço 2" />
+            </div>
+        </div>
+
+        <div class="container-infos-reserva">
+            
+        <div class="informacoes">
+                <div class="perfil">
+                <strong>Espaço oferecido por Marina Silva</strong>
+                <img src="../static/imagens/image8.png" alt="Foto da Marina" class="foto-perfil">
+                </div>
+            <hr class="linha">
+
+            <ul>
+                <li><strong>Capacidade:</strong> <p>4 pessoas</p></li>
+                <li><strong>Tempo de resposta:</strong> <p>Em até 1 hora</p>
+                </li>
+                <li><strong>Membro desde:</strong> <p>Abril de 2022</p></li>
+                <li><strong>Valor:</strong> <p>R$ 1500/mês </p></li>
+            </ul>
+
+            
+            <div class="abas-titulo">
+                <button class="ativo" onclick="trocarAba('descricao')">Descrição</button>
+                <button onclick="trocarAba('comodidades')">Comodidades</button>
+                <button onclick="trocarAba('localizacao')">Localização</button>
+            </div>
+
+
+            <p>
+                Espaço de trabalho moderno e bem iluminado no coração da cidade. Perfeito para
+                profissionais que buscam um ambiente tranquilo e produtivo. Conta com internet de
+                alta velocidade, ar-condicionado, café e água gratuitos.
+            </p>
+            
+        
+        </div>
+
+        <aside class="reserva">
+        <div class="preco">
+            <h2>R$ 1500 <span>/mês</span></h2>
+            <div class="avaliacao">⭐ <span>4.8</span></div>
+        </div>
+
+        <label for="data">Data</label>
+        <input type="text" placeholder="Selecionar data" name="data">
+
+        <div class="resumo">
+            <div class="linha">
+            <span>R$ 1500 x 1 mês</span>
+            <span>R$ 1500</span>
+            </div>
+            <div class="linha">
+            <span>Taxa de serviço</span>
+            <span>R$ 150</span>
+            </div>
+        
+            <strong>Total</strong>
+            <strong>R$ 1650</strong>
+            
+        </div>
+
+        <button>Reservar</button>
+
+        <p class="alerta">Você não será cobrado ainda</p>
+        </aside>
+
+        </div>
+    </section>
+
+  </main>
+
+<footer>
+  <hr>
+  <div class="container">
+    <div class="footer-columns">
+      <div>
+        <h3>WorkShare</h3>
+        <p>Encontre o espaço de trabalho ideal para</p>
+        <p>suas necessidades, seja por algumas horas ou dias.</p>
+      </div>
+
+      <div>
+        <h4>Quem somos</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Empresa</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Anfitrião</h4>
+        <ul>
+          <li><a href="#">Anuncie seu espaço</a></li>
+          <li><a href="#">Seguro para anfitrião</a></li>
+          <li><a href="#">Recursos</a></li>
+          <li><a href="#">Fórum da comunidade</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Centro de ajuda</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Termos de serviços</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <hr>
+      <div class="footer-bottom-content">
+        <p>&copy; 2025 WorkShare. Todos os direitos reservados.</p>
+        <nav class="social-links">
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="../static/js/home.js"></script>
+</body>
+</html>
