@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">Meu Painel</h2>
+
+            <div class="profile">
+                <h4>João Silva</h4>
+                <p class="email">joao@exemplo.com</p>
+                <button class="btn-profile">
+                <i class="fas fa-cog"></i> Editar Perfil
+        </button>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><i class="bi bi-grid"></i> Dashboard</li>
+                    <li><i class="bi bi-house"></i> Meus Anúncios</li>
+                    <li><i class="bi bi-calendar-event"></i> Minhas Reservas</li>
+                    <li><i class="bi bi-star"></i> Minhas Avaliações</li>
+                    <li><i class="bi bi-bell"></i> Notificações <span class="badge">2</span></li>
+                </ul>
+            </nav>
+
+            <button class="btn-logout">Sair</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Bem-vindo ao seu Dashboard </h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Anúncios Ativos</h3>
+                    <p class="number">2</p>
+                </div>
+                <div class="card">
+                    <h3>Reservas Pendentes</h3>
+                    <p class="number">1</p>
+                </div>
+                <div class="card">
+                    <h3>Avaliações Recentes</h3>
+                    <p class="number">3</p>
+                </div>
+            </div>
+
+            <div class="activities">
+                <h3>Atividade Recente</h3>
+                <ul>
+                    <li>
+                        <strong>Nova reserva recebida</strong> <br>
+                        Para Escritório Centro - 12/05/2025
+                    </li>
+                    <li>
+                        <strong>Pagamento confirmado</strong> <br>
+                        Reserva #12435 - R$ 150,00
+                    </li>
+                    <li>
+                        <strong>Nova avaliação recebida</strong> <br>
+                        4 estrelas - Escritório Berrini
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
