@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <title>Adicionar Novo Espaço</title>
+    <link rel="stylesheet" href="../static/css/adicionarEspaço.css">
+</head>
+<body>
+
+    <button class="btn-voltar" onclick="history.back()">
+        <i class="bi bi-arrow-left"></i> Voltar
+    </button>
+    
+    <div class="container">
+           
+
+
+        <h1>Adicionar Novo Espaço</h1>
+        <p>Compartilhe os detalhes do seu espaço de trabalho com a comunidade.</p>
+
+        <form>
+            <label for="nome">Nome do Espaço</label>
+            <input type="text" id="nome" placeholder="Ex: Escritório Criativo Centro">
+
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" placeholder="Descreva seu espaço de trabalho..."></textarea>
+
+            <div class="input-com-icone">
+                <label for="nome">Localização do Espaço</label>
+                <i class="bi bi-geo-alt"></i>
+                <input type="text" placeholder="Digite o endereço completo">
+            </div>
+
+
+            <label for="tipo">Tipo de Espaço</label>
+            <select id="tipo">
+                <option>Escritório</option>
+                <option>Coworking</option>
+                <option>Sala de Reunião</option>
+                <option>Estúdio</option>
+                <option>Outro</option>
+            </select>
+
+           <div class="comodidades">
+                <div class="item">
+                    <label>
+                        <input type="checkbox">
+                        <i class="bi bi-wifi"></i>
+                        <span>Wi-Fi</span>
+                    </label>
+                </div>
+                <div class="item">
+                    <label>
+                        <input type="checkbox">
+                        <i class="fas fa-utensils"></i>
+                        <span>Cozinha</span>
+                    </label>
+                </div>
+                <div class="item">
+                    <label>
+                        <input type="checkbox">
+                        <i class="fas fa-wheelchair"></i>
+                        <span>Acessibilidade</span>
+                    </label>
+                </div>
+                <div class="item">
+                    <label>
+                        <input type="checkbox">
+                        <i class="fa-solid fa-shower"></i>
+                        <span>Banheiro</span>
+                    </label>
+                </div>
+                <div class="item">
+                    <label>
+                        <input type="checkbox">
+                        <i class="bi bi-snow"></i>
+                        <span>Ar-condicionado</span>
+                    </label>
+                </div>
+            </div>
+
+
+            <label>Fotos do Espaço</label>
+            <div class="upload">
+                <button type="button">+ Adicionar Fotos</button>
+                <p>Arraste e solte ou clique para selecionar</p>
+            </div>
+
+            <button type="submit" class="publicar">Publicar Espaço</button>
+        </form>
+    </div>
+
+</body>
+</html>
