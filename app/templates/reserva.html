@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkShare - Faça sua Reserva</title>
+    <link rel="stylesheet" href="../static/css/reserva.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="reserva-header">
+            <a href="#" class="back-link"><i class="fas fa-arrow-left"></i> Voltar ao espaço</a>
+        </header>
+
+        <main class="reserva-container">
+            <h1>Faça sua reserva</h1>
+            <div class="reserva-content">
+                <section class="configuracao-reserva">
+                    <div class="form-group">
+                        <label for="data-label">Data</label>
+                        <div class="calendario-wrapper">
+                            <div class="calendario-header">
+                                <button id="prev-month" class="calendario-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                                <span id="current-month-year">Maio 2025</span>
+                                <button id="next-month" class="calendario-nav-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="calendario-dias-semana">
+                                <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                            </div>
+                            <div class="calendario-grid-dias" id="calendario-grid">
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario-inicio">Horário</label>
+                        <div class="horario-group">
+                            <div class="horario-input-container">
+                                <i class="far fa-clock icon-prefix"></i>
+                                <input type="time" id="horario-inicio" name="horario-inicio" value="09:00">
+                            </div>
+                            <span class="horario-separador">até</span>
+                            <div class="horario-input-container">
+                                <i class="far fa-clock icon-prefix"></i>
+                                <input type="time" id="horario-fim" name="horario-fim" value="18:00">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numero-pessoas">Número de pessoas</label>
+                        <div class="pessoas-input-container">
+                             <i class="fas fa-user icon-prefix"></i>
+                            <input type="number" id="numero-pessoas" name="numero-pessoas" value="1" min="1">
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="resumo-reserva">
+                    <h2>Resumo da reserva</h2>
+                    <div class="item-resumo">
+                        <span>Data</span>
+                        <span id="resumo-data">Não selecionada</span>
+                    </div>
+                    <div class="item-resumo">
+                        <span>Horário</span>
+                        <span id="resumo-horario">09:00 - 18:00</span>
+                    </div>
+                    <div class="item-resumo">
+                        <span>Pessoas</span>
+                        <span id="resumo-pessoas">1</span>
+                    </div>
+                    <hr class="resumo-hr">
+                    <div class="item-resumo total">
+                        <span>Total</span>
+                        <span id="resumo-total">R$ 150,00</span>
+                    </div>
+                    <button id="confirmar-reserva-btn" class="btn-confirmar">Confirmar reserva</button>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <script src="..\static\js\reverva.js"></script>
+</body>
+</html>
