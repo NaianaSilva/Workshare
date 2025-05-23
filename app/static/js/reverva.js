@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    let currentDate = new Date(2025, 4, 1); // May 2025
-    let selectedDatesArray = []; // MODIFIED: Array to store multiple selected dates (as YYYY-MM-DD strings)
+    let currentDate = new Date(2025, 4, 1);
+    let selectedDatesArray = [];
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
@@ -54,14 +54,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const cellDate = new Date(year, month, day);
             cellDate.setHours(0, 0, 0, 0);
-            const cellDateString = cellDate.toISOString().split('T')[0]; // YYYY-MM-DD format
+            const cellDateString = cellDate.toISOString().split('T')[0];
             dayCell.dataset.date = cellDateString;
 
             if (cellDate.toDateString() === today.toDateString()) {
                 dayCell.classList.add('today');
             }
 
-            // MODIFIED: Check if this date is in our selectedDatesArray
             if (selectedDatesArray.includes(cellDateString)) {
                 dayCell.classList.add('selected');
             }
@@ -76,17 +75,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     return;
                 }
 
-                // --- MODIFIED: Multi-Day Selection Logic ---
+             
                 const dateIndex = selectedDatesArray.indexOf(cellDateString);
 
-                if (dateIndex > -1) { // If date is already selected, unselect it
+                if (dateIndex > -1) { 
                     selectedDatesArray.splice(dateIndex, 1);
                     dayCell.classList.remove('selected');
-                } else { // If date is not selected, select it
+                } else {
                     selectedDatesArray.push(cellDateString);
                     dayCell.classList.add('selected');
                 }
-                selectedDatesArray.sort(); // Keep dates sorted
+                selectedDatesArray.sort();
                 console.log("reserva.js: Dates selected:", selectedDatesArray);
                 updateSummary();
             });
@@ -112,10 +111,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateSummary() {
         console.log("reserva.js: updateSummary called. Selected dates:", selectedDatesArray);
         if (resumoData) {
-            // MODIFIED: Display multiple dates
+         
             if (selectedDatesArray.length > 0) {
                 resumoData.textContent = selectedDatesArray.map(dateStr => {
-                    const d = new Date(dateStr + 'T00:00:00'); // Ensure correct parsing
+                    const d = new Date(dateStr + 'T00:00:00'); 
                     return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
                 }).join(', ');
             } else {
@@ -130,10 +129,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const fim = horarioFimInput ? horarioFimInput.value || "18:00" : "18:00";
         if (resumoHorario) resumoHorario.textContent = `${inicio} - ${fim}`;
 
-        // MODIFIED: Total Calculation for multiple days
+   
         let totalCost = 0;
-        const dailyRate = 150; // Example daily rate
-        const perPersonExtraCostPerDay = 20; // Example extra cost per person per day
+        const dailyRate = 150;
+        const perPersonExtraCostPerDay = 20;
 
         if (selectedDatesArray.length > 0) {
             totalCost = selectedDatesArray.length * dailyRate;
@@ -156,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             const reserva = {
-                datas: selectedDatesArray, // MODIFIED: Send array of dates
+                datas: selectedDatesArray, 
                 horarioInicio: horarioInicioInput.value,
                 horarioFim: horarioFimInput.value,
                 pessoas: numeroPessoasInput.value,
@@ -168,16 +167,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     console.log("reserva.js: Performing initial render and summary update.");
-    // Pre-select May 13th, 2025 (if the calendar starts in May 2025)
+    
     const may13th2025Str = "2025-05-23";
-    if (currentDate.getFullYear() === 2025 && currentDate.getMonth() === 4) { // If initial view is May 2025
+    if (currentDate.getFullYear() === 2025 && currentDate.getMonth() === 4) {
         if (!selectedDatesArray.includes(may13th2025Str)) {
             selectedDatesArray.push(may13th2025Str);
-            selectedDatesArray.sort(); // Keep it sorted
+            selectedDatesArray.sort(); 
         }
     }
 
-    renderCalendar(); // Render the calendar (it will use selectedDatesArray to mark cells)
+    renderCalendar(); 
     updateSummary(); 
     console.log("reserva.js: Script initialization complete. Selected dates:", selectedDatesArray);
 });
