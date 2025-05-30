@@ -1,0 +1,292 @@
+/* Reset, Layout e Estilos da Sidebar (Reaproveitados) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f8fa;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    padding: 25px 20px;
+    border-right: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #343a40;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #F9FAFB;
+    border-radius: 10px;
+}
+
+.profile h4 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 4px;
+    margin-top: 1rem;
+}
+
+.profile .email {
+    font-size: 13px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.btn-profile {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+    color: #495057;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+    margin: 1rem;
+}
+
+.btn-profile a{
+    text-decoration: none;
+}
+
+.btn-profile:hover {
+    background-color: #f1f3f5;
+}
+
+nav ul li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #495057;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav ul li a i {
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #e9ecef;
+}
+
+nav ul li.active a {
+    background-color: #007bff;
+    color: white;
+}
+
+nav ul li.active a:hover {
+    background-color: #0069d9;
+}
+
+.badge {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.logout-link {
+    text-decoration: none;
+    margin-top: auto;
+}
+
+/* Botão de sair igual ao da imagem (cinza claro) */
+.btn-logout {
+    background: #F9FAFB;
+    color: #020817;
+    border: 1px solid #E2E8F0;
+    font-weight: 500;
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #eceded;
+}
+
+/* Cabeçalho da Página (Reaproveitado) */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.main-header h1 {
+    font-weight: 500;
+    font-size: 26px;
+    color: #343a40;
+}
+
+.btn-new {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-new:hover {
+    background-color: #0069d9;
+}
+
+.btn-new i {
+    font-weight: bold;
+}
+
+
+/* --- ESTILOS ESPECÍFICOS: LISTA DE RESERVAS --- */
+
+.reservations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaço entre os cards */
+}
+
+.reservation-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+}
+
+.reservation-details strong {
+    font-size: 16px;
+    font-weight: 500;
+    color: #343a40;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.reservation-details span,
+.reservation-details p {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* Status (Confirmada, Pendente) */
+.status {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status-confirmed {
+    background-color: #d1fae5;
+    /* Verde claro */
+    color: #067647;
+    /* Verde escuro */
+}
+
+.status-pending {
+    background-color: #ffedd5;
+    /* Laranja claro */
+    color: #9a3412;
+    /* Laranja escuro */
+}
+
+.status-concluida{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    background-color: #ECECEC;
+    color: #131513;
+    border-radius: 7px;
+}
+
+/* Botões de Ação (Avaliar, Concluída) */
+.reservation-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #495057;
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-primary {
+    background-color: #e9ecef;
+    color: #495057;
+    border-color: #e9ecef;
+}
+
+.btn-primary:hover {
+    background-color: #dee2e6;
+}

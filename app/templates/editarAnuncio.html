@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Anúncio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../static/css/editarAnuncio.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <header class="page-header">
+            <a href="meusAnuncios.html" class="back-link">← Voltar para o Dashboard</a>
+            <h1>Editar Anúncio</h1>
+        </header>
+
+        <main class="form-grid">
+            <section class="form-section">
+                <h2>Informações Básicas</h2>
+                <p>Edite as informações principais do seu espaço</p>
+
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" value="Escritório Centro">
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao"
+                        rows="5">Espaço moderno e bem localizado no centro da cidade, próximo a restaurantes e transporte público. Ideal para reuniões e trabalho individual.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" value="Rua Augusta, 1500, Centro">
+                </div>
+
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" value="São Paulo">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-espaco">Tipo de Espaço</label>
+                    <select id="tipo-espaco">
+                        <option selected>Escritório</option>
+                        <option>Sala de Reunião</option>
+                        <option>Estúdio</option>
+                        <option>Coworking</option>
+                    </select>
+                </div>
+            </section>
+
+            <aside class="right-column">
+                <section class="card-section">
+                    <h2>Preço e Capacidade</h2>
+                    <p>Defina o preço por hora e capacidade do seu espaço</p>
+                    <div class="form-group">
+                        <label for="preco">Preço por hora (R$)</label>
+                        <input type="number" id="preco" value="80">
+                    </div>
+                    <div class="form-group">
+                        <label for="capacidade">Capacidade (pessoas)</label>
+                        <input type="number" id="capacidade" value="4">
+                    </div>
+                </section>
+
+                <section class="card-section">
+                    <h2>Comodidades</h2>
+                    <p>Selecione as comodidades disponíveis</p>
+                    <div class="checkbox-grid">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="wifi" checked>
+                            <label for="wifi">Wi-Fi</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="projetor" checked>
+                            <label for="projetor">Projetor</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cafe">
+                            <label for="cafe">Serviço de Café</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="ar" checked>
+                            <label for="ar">Ar-condicionado</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="quadro">
+                            <label for="quadro">Quadro branco</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card-section">
+                    <h2>Imagens</h2>
+                    <p>Gerencie as imagens do seu espaço</p>
+                    <div class="image-grid">
+                        <div class="image-preview">
+                            <img src="https://via.placeholder.com/150" alt="Preview do espaço">
+                            <button class="remove-btn">Remover</button>
+                        </div>
+                        <div class="upload-placeholder">
+                            <i class="bi bi-upload"></i>
+                            <span>Adicionar Imagem</span>
+                            <small>Clique para fazer upload</small>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </main>
+
+        <footer class="page-footer">
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            <button type="button" class="btn btn-danger">Excluir Anúncio</button>
+        </footer>
+    </div>
+
+</body>
+
+</html>

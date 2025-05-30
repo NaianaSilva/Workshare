@@ -1,0 +1,164 @@
+/* --- ESTILOS GLOBAIS E LAYOUT DA PÁGINA --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f8fa; /* Fundo cinza claro */
+    color: #374151;
+    padding: 40px 20px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 16px;
+}
+.back-link {
+    font-size: 14px;
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.main-card h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 24px;
+}
+
+/* --- MENSAGEM DE SUCESSO --- */
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+.alert-success {
+    background-color: #f0fdf4;
+    color: #166534;
+}
+.alert-success i {
+    font-size: 20px;
+    color: #22c55e;
+    margin-top: 2px;
+}
+.alert p {
+    line-height: 1.5;
+}
+
+/* --- CAIXA DE DETALHES --- */
+.details-box {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 30px;
+}
+.details-box h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 16px;
+}
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.detail-item span {
+    display: block;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+.detail-item strong {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111827;
+}
+
+/* --- FORMULÁRIO DE AVALIAÇÃO --- */
+.review-form h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 16px;
+}
+.rating-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.rating-stars {
+    display: flex;
+    gap: 4px;
+    font-size: 28px;
+    color: #d1d5db; /* Cor das estrelas vazias */
+}
+.rating-stars i:hover {
+    color: #facc15; /* Cor para hover */
+    cursor: pointer;
+}
+.rating-group span {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #374151;
+}
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    resize: vertical;
+    min-height: 100px;
+    background-color: #F8FAFC;
+}
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #a5b4fc; /* Azul/Roxo claro */
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-submit:hover {
+    background-color: #818cf8;
+}
